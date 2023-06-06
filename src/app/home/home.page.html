@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Título de la Página
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      App's para Papás Primerizos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bienvenido, papá primerizo!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Aquí encontrarás todas las herramientas necesarias para organizar y planificar el cuidado de tu bebé.</p>
+    </ion-card-content>
+  </ion-card>
+
+ 
+  
+
+<ion-list>
+  <ion-item *ngFor="let task of tasks">
+    <ion-label>{{ task }}</ion-label>
+  </ion-item>
+</ion-list>
+
+
+<ion-item>
+  <ion-input placeholder="Nueva tarea" [(ngModel)]="newTask"></ion-input>
+  <ion-button slot="end" (click)="addTask()">Agregar</ion-button>
+</ion-item>
+
+
+  <ion-button expand="full" (click)="navigateToCalendar()">
+    Ir al Calendario
+  </ion-button>
+  <ion-button expand="full" (click)="navigateToTaskDetails('Alguna tarea')">
+    <ion-icon name="list-outline" slot="start"></ion-icon>
+    <ion-label>Detalle de la tarea</ion-label> 
+  </ion-button>
+</ion-content>
+ 

@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Título de la Página
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Detalles de la tarea</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ task }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Fecha:</ion-label>
+          <ion-note>{{ fecha }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Prioridad:</ion-label>
+          <ion-note>{{ prioridad }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Descripción:</ion-label>
+          <ion-note>{{ descripcion }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Asociado a:</ion-label>
+          <ion-note>{{ papaPrimerizo }}</ion-note>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-button (click)="goHome()">Volver al Inicio</ion-button>
+  </ion-content>
+  

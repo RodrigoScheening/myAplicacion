@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Calendario
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="calendar-controls">
+      <button (click)="prevYear()">Año Anterior</button>
+      <button (click)="prevMonth()">Mes Anterior</button>
+      <button (click)="nextMonth()">Mes Siguiente</button>
+      <button (click)="nextYear()">Año Siguiente</button>
+    </div>
+  
+    <div class="calendar-view">
+      <div class="current-view">{{ view }}</div>
+      <mwl-calendar-month-view
+        *ngIf="view === CalendarView.Month"
+        [viewDate]="viewDate"
+        [events]="events">
+      </mwl-calendar-month-view>
+    </div>
+  
+    <ion-button (click)="goBack()">Volver</ion-button>
+  </ion-content>
+  
